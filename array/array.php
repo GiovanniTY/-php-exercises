@@ -26,7 +26,7 @@ $myFavoriteFood = ["Gnocchi al pesto"];
         'age' => '27'];
         
 
-    $me['hobbies'] = ["Coding" , "ps5"];
+    $me['hobbies'] = ["Coding" , "ps5","watch tv"];
 
         echo '<pre>';
         print_r($me);
@@ -36,10 +36,48 @@ $myFavoriteFood = ["Gnocchi al pesto"];
              'age' => 53,
             'hobbies' => ['cooking', 'Travel']];
     
-    $me["mother"] = [$mymom];
+    /* $me["mother"] = [$mymom]; */
     echo '<pre>';
     print_r($me);
     echo '<pre>';
+
+    /* Count the number of elements
+Say you want to know how many hobbies your mother has. Try to guess the native php function that allows you to count the number of elements in an array.
+Below, count your own hobbies
+Below, add both totals and display the total amount of hobbies. */
+
+/* var_dump(count($me['hobbies']));
+$totHobbies = array_merge($mymom['hobbies'] , $me['hobbies']);
+var_dump(count($totHobbies)); */
+
+$me['hobbies'] [] = 'Taxidermie';
+
+print_r($me);
+
+$me['lastname'] ='Durand';
+print_r($me);
+
+$soulmate = [
+    'firstname' => 'Aline',
+    'lastname' => 'Lurquin',
+    'age' => 25,
+    'hobbies' => [
+        'Chevaux',
+        'Promener',
+        'watch tv',
+        'Taxidermie'
+    ]
+];
+
+print_r($soulmate);
+
+
+/* $possible_hobbies_via_merge = array_merge($me['hobbies'], $soulmate['hobbies']); */ 
+
+ $possible_hobbies_via_intersection = array_intersect($me['hobbies'], $soulmate['hobbies']);
+print_r($possible_hobbies_via_intersection);
+
+
 
     
 ?>
